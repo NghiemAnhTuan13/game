@@ -73,18 +73,21 @@ html, body {
 }
     </style>
     <script>
-        var do1 = document.getElementById("content1");
-        var drink = document.getElementById("content2");
-        var bnt = document.getElementsByClassName("random")
-        var dotext = ['Do','nhảy','hát'];
-        var drinktext = ['drink','uống 1 ly','uống 2 ly'];
-        do1.innerHTML = dotext[0];
-        drink.innerHTML = drinktext[0];
-        let num;
-        bnt[0].onclick = function() {
-            num = (Math.floor(Math.random() * 2) + 1);
-            do1.innerHTML = dotext[num];
-            drink.innerHTML = drinktext[num]
-        }
+
+var do1 = document.getElementById("content1");
+var drink = document.getElementById("content2");
+var bnt = document.getElementsByClassName("random")
+var dotext = ['Do','liếm','cắn','véo','vỗ','mút'];
+var drinktext = ['drink','chân','tay','dùi','bụng', 'má','miệng','tai','ngực','ấy','mông','cổ','lưng'];
+do1.innerHTML = dotext[0];
+drink.innerHTML = drinktext[0];
+let num1;
+let num2;
+bnt[0].onclick = function() {
+    num1 = (Math.floor(Math.random() * 5) + 1);
+    num2 = (Math.floor(Math.random() * 12) + 1);
+    do1.innerHTML = dotext[num1];
+    drink.innerHTML = drinktext[num2];
+}
     </script>
 </body>
