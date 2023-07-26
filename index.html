@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NATU</title>
+    <meta :charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-sacle=1, user-scalable =no">
+</head>
+<body>
+    <div class="div">
+        <div class="card">
+            <div id="content1">
+                    Do
+            </div>
+            <div id="content2">
+                    Drink
+            </div>
+        </div>
+        <input type="button" class="random" value="đổi">
+    </div>
+    <style>
+        *{
+    padding: 0;
+    margin : 0;
+    box-sizing:border-box;
+    border: NONE;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.div{
+    height: 100%;
+    background-color: beige;
+}
+.card{
+    width: 200px;
+    height: 300px;
+    background-color: blueviolet;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 20%;
+    border: yellow 4px solid;
+    border-radius: 10%;
+}
+#content1{
+    height: 50%;
+    width: 170px;
+    text-align: center;
+    line-height: 150px;
+    border-bottom: red 1px solid;
+    margin: auto;
+}
+#content2{
+    height: 50%;
+    width: 170px;
+    text-align: center;
+    line-height: 150px;
+    margin: auto;
+}
+.random{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 50px;
+    background-color: fuchsia;
+    border-radius: 10%;
+    left: 40%;
+}
+    </style>
+    <script>
+        var do1 = document.getElementById("content1");
+        var drink = document.getElementById("content2");
+        var bnt = document.getElementsByClassName("random")
+        var dotext = ['Do','nhảy','hát'];
+        var drinktext = ['drink','uống 1 ly','uống 2 ly'];
+        do1.innerHTML = dotext[0];
+        drink.innerHTML = drinktext[0];
+        let num;
+        bnt[0].onclick = function() {
+            num = (Math.floor(Math.random() * 2) + 1);
+            do1.innerHTML = dotext[num];
+            drink.innerHTML = drinktext[num];
+        }
+    </script>
+</body>
